@@ -1,7 +1,7 @@
-package practica1aj;
+package practica1;
 import java.util.Scanner;
 
-public class Practica1aj {
+public class Practica1 {
     
     // CAMBIO DE MONEDAS
     
