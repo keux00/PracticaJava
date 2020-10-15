@@ -105,38 +105,37 @@ public class Practica1 {
     public static void juegoAhorcado(){
         
         Scanner s = new Scanner(System.in);
-        int vidas = 6;
+        int vidas = 10;
         String palabra;
         int aciertos = 0;
         int tamaño;
         String opcionah;
         int contador = 0;
-        String[] palabras = new String[]{"lapiz", "goma", "libreta", "maestro", "examen", "matematicas"};
+        String[] palabras = new String[]{"abeja", "aguila", "avispa", "ballena", "bisonte", "bufalo", "burro", "caballo", "camello", "canario", "cangrejo", "canguro", "caracol", "cebra", "cerdo", "chimpance", "ciervo", "cisne", "bufalo", "cocodrilo", "elefante", "escarabajo", "escorpion", "foca", "gallina", "gallo", "gato", "golondrina", "hipopotamo", "hormiga", "jabali", "jirafa", "leon", "loro", "mosca", "mosquito", "oso", "oveja", "perdiz", "perro", "pinguino", "pollo", "saltamontes", "serpiente", "tigre", "topo", "toro", "tortuga", "vaca", "zorro"};
         char[] respuesta;
         palabra = palabras[(int) (Math.random() * 48)];
         tamaño = palabra.length();
         respuesta = new char[tamaño];
          
          
-        for (int i = 0; i<tamaño; i++) {
-            respuesta[i] = 'X';
+        for (int l = 0; l<tamaño; l++) {
+            respuesta[l] = 'X';
         }
-         
  
         while (aciertos != tamaño && vidas != 0) {
             System.out.println("=========AHORCADO==========          VIDAS="+vidas +" Aciertos= "+aciertos);
             dibujarAhorcado(vidas);
             System.out.println("");
-            for (int i = 0; i<tamaño; i++) {
+            for (int l = 0; l<tamaño; l++) {
  
-                System.out.print("__" + respuesta[i] + "___  ");
+                System.out.print("__" + respuesta[l] + "___  ");
             }
             System.out.println("\nIngresa una letra: ");
             opcionah = s.next();
             if (palabra.contains(opcionah)) {
-                for (int i = 0; i<tamaño; i++) {
-                    if (palabra.charAt(i) == opcionah.charAt(0)) {
-                        respuesta[i] = opcionah.charAt(0);
+                for (int l = 0; l<tamaño; l++) {
+                    if (palabra.charAt(l) == opcionah.charAt(0)) {
+                        respuesta[l] = opcionah.charAt(0);
                         contador++;
                     }
                 }
@@ -153,9 +152,9 @@ public class Practica1 {
         }else
         {
             System.out.println("");
-            for (int i = 0; i<tamaño; i++) {
+            for (int l = 0; l<tamaño; l++) {
  
-                System.out.print("__" + respuesta[i] + "___  ");
+                System.out.print("__" + respuesta[l] + "___  ");
             }
             System.out.println("Has ganado");
              
@@ -164,53 +163,88 @@ public class Practica1 {
     
     // INTERFAZ AHORCADO
     
-    private static void dibujarAhorcado(int i) {
-        switch (i) {
+    private static void dibujarAhorcado(int l) {
+        switch (l) {
+            case 10:
+                System.out.println(" ---------------------");
+                for (int m = 0; m<15; m++) {
+                    System.out.println(" |");
+ 
+                }
+                System.out.println("__________");
+                break;
+            
+            case 9:
+                System.out.println(" ---------------------");
+                System.out.println(" |                     |");
+                System.out.println(" |                     |");
+                System.out.println(" |                  -------");
+                System.out.println(" |                 | -  -  |");
+                System.out.println(" |                 |   o   |");
+                System.out.println(" |                  -------");
+                for (int m = 0; m<10; m++) {
+                    System.out.println(" |");
+ 
+                }
+                System.out.println("__________");
+                break;
+            
+            case 8:
+                System.out.println(" ---------------------");
+                System.out.println(" |                     |");
+                System.out.println(" |                     |");
+                System.out.println(" |                  -------");
+                System.out.println(" |                 | -  -  |");
+                System.out.println(" |                 |   o   |");
+                System.out.println(" |                  -------");
+                for (int m = 0; m<10; m++) {
+                    System.out.println(" |");
+ 
+                }
+                System.out.println("__________");
+                break;
+            
+            case 7:
+                System.out.println(" ---------------------");
+                System.out.println(" |                     |");
+                System.out.println(" |                     |");
+                System.out.println(" |                  -------");
+                System.out.println(" |                 | -  -  |");
+                System.out.println(" |                 |   o   |");
+                System.out.println(" |                  -------");
+                System.out.println(" |                     |   ");
+                System.out.println(" |                     |   ");
+                System.out.println(" |                     |   ");
+                System.out.println(" |                     |   ");
+                System.out.println(" |                     |   ");
+                for (int m = 0; m<5; m++) {
+                    System.out.println(" |");
+ 
+                }
+                System.out.println("__________");
+                break;
+ 
             case 6:
                 System.out.println(" ---------------------");
-                for (int j = 0; j<15; j++) {
+                System.out.println(" |                     |");
+                System.out.println(" |                     |");
+                System.out.println(" |                  -------");
+                System.out.println(" |                 | -  -  |");
+                System.out.println(" |                 |   o   |");
+                System.out.println(" |                  -------");
+                System.out.println(" |                     |   ");
+                System.out.println(" |                     |   ");
+                System.out.println(" |                     |   ");
+                System.out.println(" |                     |   ");
+                System.out.println(" |                     |   ");
+                for (int m = 0; m<5; m++) {
                     System.out.println(" |");
  
                 }
                 System.out.println("__________");
                 break;
- 
+            
             case 5:
-                System.out.println(" ---------------------");
-                System.out.println(" |                     |");
-                System.out.println(" |                     |");
-                System.out.println(" |                  -------");
-                System.out.println(" |                 | -  -  |");
-                System.out.println(" |                 |   o   |");
-                System.out.println(" |                  -------");
-                for (int j = 0; j<10; j++) {
-                    System.out.println(" |");
- 
-                }
-                System.out.println("__________");
-                break;
- 
-            case 4:
-                System.out.println(" ---------------------");
-                System.out.println(" |                     |");
-                System.out.println(" |                     |");
-                System.out.println(" |                  -------");
-                System.out.println(" |                 | -  -  |");
-                System.out.println(" |                 |   o   |");
-                System.out.println(" |                  -------");
-                System.out.println(" |                     |   ");
-                System.out.println(" |                     |   ");
-                System.out.println(" |                     |   ");
-                System.out.println(" |                     |   ");
-                System.out.println(" |                     |   ");
-                for (int j = 0; j<5; j++) {
-                    System.out.println(" |");
- 
-                }
-                System.out.println("__________");
-                break;
- 
-            case 3:
                 System.out.println(" ---------------------");
                 System.out.println(" |                     |");
                 System.out.println(" |                     |");
@@ -223,13 +257,52 @@ public class Practica1 {
                 System.out.println(" |                 /   |   ");
                 System.out.println(" |                /    |   ");
                 System.out.println(" |                     |   ");
-                for (int j = 0; j<5; j++) {
+                for (int m = 0; m<5; m++) {
                     System.out.println(" |");
  
                 }
                 System.out.println("__________");
                 break;
+            case 4:
+                System.out.println(" ---------------------");
+                System.out.println(" |                     |");
+                System.out.println(" |                     |");
+                System.out.println(" |                  -------");
+                System.out.println(" |                 | -  -  |");
+                System.out.println(" |                 |   o   |");
+                System.out.println(" |                  -------");
+                System.out.println(" |                     |   ");
+                System.out.println(" |                   / |   ");
+                System.out.println(" |                 /   |   ");
+                System.out.println(" |                /    |   ");
+                System.out.println(" |                     |   ");
+                for (int m = 0; m<5; m++) {
+                    System.out.println(" |");
  
+                }
+                System.out.println("__________");
+                break;
+            
+            case 3:
+                System.out.println(" ---------------------");
+                System.out.println(" |                     |");
+                System.out.println(" |                     |");
+                System.out.println(" |                  -------");
+                System.out.println(" |                 | -  -  |");
+                System.out.println(" |                 |   o   |");
+                System.out.println(" |                  -------");
+                System.out.println(" |                     |   ");
+                System.out.println(" |                   / | \\ ");
+                System.out.println(" |                  /  |   \\ ");
+                System.out.println(" |                 /   |     \\ ");
+                System.out.println(" |                     |   ");
+                for (int m = 0; m<5; m++) {
+                    System.out.println(" |");
+ 
+                }
+                System.out.println("__________");
+                break;
+                
             case 2:
                 System.out.println(" ---------------------");
                 System.out.println(" |                     |");
@@ -243,13 +316,13 @@ public class Practica1 {
                 System.out.println(" |                  /  |   \\ ");
                 System.out.println(" |                 /   |     \\ ");
                 System.out.println(" |                     |   ");
-                for (int j = 0; j<5; j++) {
+                for (int m = 0; m<5; m++) {
                     System.out.println(" |");
  
                 }
                 System.out.println("__________");
                 break;
- 
+                    
             case 1:
                 System.out.println(" ---------------------");
                 System.out.println(" |                     |");
@@ -266,7 +339,7 @@ public class Practica1 {
                 System.out.println(" |                    /  ");
                 System.out.println(" |                   /      ");
                 System.out.println(" |                  /       ");
-                for (int j = 0; j<2; j++) {
+                for (int m = 0; m<2; m++) {
                     System.out.println(" |");
  
                 }
@@ -289,7 +362,7 @@ public class Practica1 {
                 System.out.println(" |                    / \\");
                 System.out.println(" |                   /   \\  ");
                 System.out.println(" |                  /     \\ ");
-                for (int j = 0; j<2; j++) {
+                for (int m = 0; m<2; m++) {
                     System.out.println(" |");
  
                 }
